@@ -1,0 +1,122 @@
+
+.loginContainer {
+	position:absolute;
+	z-index:5000;
+	text-align:center;
+	align-items:center;
+	background:#fefefe;
+	width:50%;
+	height:50%;
+	padding:2vh;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+h1{
+	font-family:arial;
+	margin-bottom: 2vh;
+  font-weight: bolder;
+  color:#5c976a;
+}
+
+hr{
+  height: 2px;
+  background-color: #5c976a;
+  border: none;
+}
+
+h5{
+	justify-content:center;
+	align-items:center;
+	display:flex;
+}
+
+.input
+{
+  appearance: none;
+  font: 15px/1 'Open Sans', sans-serif;
+  color: #333;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ecebeb;
+  border: none;
+  padding: 10px 11px 11px 11px;
+  border-radius: 3px;
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom:5vh;
+}
+
+
+.register {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.register:hover{
+  background-color: #F3F4F6;
+  text-decoration: none;
+  color:#0990ff;
+  transition-duration: 0.1s;
+	
+}
+
+.register:active{
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.register:focus {
+  outline: 1px transparent;
+}
+
+#log{
+	font-family:arial;
+	font-weight:100;
+}
+
+#a{
+	margin-left:10px;
+	text-decoration:none;
+	font-weight:1000;
+	color:#48a6f3;
+	transition-duration: 1s;
+	font-size:100%;
+}
+
+#a:hover{
+	color:#0990ff;
+	text-shadow: 2px 2px 8px  #00ff40;
+	transition-duration: 1s;
+
+}
+
+#logout{
+  margin-left:15px;
+}
+
+#login{
+  margin-right: 15px;
+}

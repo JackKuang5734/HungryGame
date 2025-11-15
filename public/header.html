@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title><?php echo $titleOfPage; ?></title>
+  	  
+    <!-- include an external style sheet -->
+    <link rel="stylesheet" href="style.css">  
+    <!-- include an external JavaScript file -->
+    <script src="lightbox.js"></script>
+  </head>
+  
+  <body>
+  
+	<div class="top">
+        <div class="top-area">
+            <div class="left-section-top">
+                <img src="favicon\android-chrome-512x512.png" class="logo">
+                <marquee direction="right"> <h3>Welcome to the community!</h3></marquee>
+            </div>
+            <div class="right-section-top">
+                <img class="profile" src="images/profilePic.png">
+            </div>
+        </div>
+
+        <div id="anchors">
+            <?php
+				if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true){
+				} else {
+					echo "<li><a class='active' href='?page=form'>Become a Tutor</a></li>";
+				}
+			?>
+            <a href='?page=Home'>View Tutors</a>
+            <a href="index.php?action=del">Reset Gallery</a>
+            <a href="downloadall.php">Download All</a>
+            <a href='?page=search'>Search Tutors</a>
+
+        </div>
+		
+		<div class="topnav-right">
+			<?php
+				if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true){
+					echo "<li><a href='?page=account'>" . $_SESSION['account']['fname'] . "'s Account</a></li>";
+					echo "<li><a href='index.php?action=logout'>Log Out</a></li>";
+				} else {
+					echo "<li><a href='?page=login'>Log In</a></li>";
+				}
+			?>
+		</div>
+    </div>
+	
+	
+	<h1>TutorMD</h1><hr>
+	<!--header ends here-->

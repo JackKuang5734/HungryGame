@@ -1,0 +1,593 @@
+*{
+	user-select:none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	
+}
+
+body{
+	overflow:hidden;
+}
+
+#canvas{
+	background-image:url(images/lava.png);
+	width:100vw;
+	height:56.25vw;
+	max-width:1920px;
+	max-height:1080px;
+	
+}
+
+#canvasHolder {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background-color:#dddddd;
+	align-items:center;
+	justify-content:center;
+	display:flex;
+}
+
+#backdrop{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	background-color:rgba(0, 0, 0, 0.47);
+	width:100%;
+	height:100%;
+}
+
+.title{
+	margin-bottom:40%;
+	font-size:5vw;
+	font-family: 'Rowdies', cursive;
+	color:white;
+}
+
+#startScreen {
+	
+    -webkit-user-drag: none; /* Safari/Chrome-specific */
+    -moz-user-drag: none; /* Firefox-specific */
+    -ms-user-drag: none; /* Internet Explorer/Edge-specific */
+   
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#AAA;
+	align-items:center;
+	justify-content:center;
+	display:flex;
+	left:0;
+	top:0;
+}
+
+
+.container{
+	width:100%;
+	height:100%;
+	direction: rtl;
+	align-items:center;
+	display:flex;
+	justify-content:center;
+}
+
+#absolute{
+	position:absolute;
+	justify-content:center;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+}
+
+#deathScreen{
+	display:none;
+	position:absolute;
+	background-color:white;
+	align-items:center;
+	justify-content:center;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+}
+
+.play{
+	background-color:rgba(0, 0, 0, 0.2);
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	color:white;
+	width:25vw;
+	font-size:2.4vw;
+	height:10vh;
+}
+
+/* .play{ */
+	
+	/* max-width:70vw; */
+	/* border-radius:5px; */
+	/* text-align:center; */
+	/* align-items:center; */
+	/* justify-content:center; */
+	/* display:flex; */
+	/* height:3em; */
+	/* width:5em; */
+	/* padding:10px; */
+	/* background-color:#EEEEEE; */
+	/* top:55%; */
+	/* margin:15px; */
+	/* position:absolute; */
+	/* font-size:2.5em; */
+	/* margin-bottom:60px; */
+/* }	 */
+
+/* #controls{ */
+	/* max-width:70vw; */
+	/* border-radius:5px; */
+	/* text-align:center; */
+	/* align-items:center; */
+	/* justify-content:center; */
+	/* display:flex; */
+	/* height:3em; */
+	/* width:7em; */
+	/* padding:10px; */
+	/* background-color:#EEEEEE; */
+	/* top:70%; */
+	/* margin:15px; */
+	/* position:absolute; */
+	/* font-size:2.5em; */
+/* }	 */
+
+#play:hover{
+	background-color:#CCCCCC;
+}
+
+#controls:hover{
+	background-color:#CCCCCC;
+}
+
+#canvas {
+	background-color:#dddddd;
+	border-radius:5px;
+	/* position:absolute; */
+}
+
+p{
+	font-color:red;
+}
+
+#icons{
+	position:absolute;
+	right:15%;
+	bottom:2%;
+}
+
+#backpack:hover{
+	background-color:white;
+}
+
+#crafting:hover{
+	background-color:white;
+}
+
+/* #craftingGUI{ */
+	/* position:absolute; */
+	/* right:9%; */
+	/* top:15%; */
+	/* width: 50vh; */
+	/* height: 30vw; */
+	/* background-color:white; */
+/* } */
+
+#healthBack{
+	top:2vh;
+	position:absolute;
+	width:300px;
+	height:2vh;
+	background-color:black;
+}
+
+#healthReal{
+	width:300px;
+	height:100%;
+	background-color:green;
+}
+
+#hungerBack{
+	top:5vh;
+	position:absolute;
+	width:300px;
+	height:2vh;
+	background-color:black;
+}
+
+#hungerReal{
+	width:300px;
+	height:100%;
+	background-color:#e39b30;
+}
+
+.mobileControl{
+	user-select:none;
+	background-color:rgba(170,170,170,0.3);
+	border-radius:4px;
+	width:25vw;
+	height:25vw;
+	border: 2px solid #eeeeee;
+	position:absolute;
+	left:5vw;
+	bottom:10%;
+}
+.row{
+	user-select:none;
+	width:100%;
+	height:33%;
+	display:flex;
+	padding:0;
+	margin:0 !important;
+	justify-content:center;
+	align-items:center;
+}
+
+.row:nth-child(2){
+	align-items:center;
+	justify-content:start !important;
+}
+
+.button{
+	opacity: 1 !important;
+	
+	/* user-drag: none;  */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-drag: none; */
+  /* -webkit-user-select: none; */
+  /* -ms-user-select: none; */
+  /* pointer-events:none; */
+  touch-action: pan-y pan-x;
+}
+
+#upButton{
+	background-image: url("images/upArrow.png");
+	width: 7vw;
+    height: 7vw;
+    background-size: cover;
+}
+
+#downButton{
+	background-image: url("images/downArrow.png");
+	width: 7vw;
+    height: 7vw;
+    background-size: cover;
+}
+
+#leftButton{
+	background-image: url("images/leftArrow.png");
+	position:absolute;
+	left:20px;
+	width: 7vw;
+    height: 7vw;
+    background-size: cover;
+}
+
+#rightButton{
+	background-image: url("images/rightArrow.png");
+	position:absolute;
+	right: 20px;
+	width: 7vw;
+    height: 7vw;
+    background-size: cover;
+}
+
+#banner{
+	display:flex;
+	background-image: url("images/hungryGame.png");
+	object-fit: cover;
+	background-size: cover;
+	width:100%;
+	height:100%
+}
+
+#loginSignup{
+	border-radius:3px;
+	position:relative;
+	width:45%;
+	z-index:5000;
+	min-width:75px;
+	height:auto;
+	left: 0px;
+	top: 0px;
+}
+
+#signUp{
+	text-decoration:none;
+	font-weight:1000;
+	color:#48a6f3;
+	transition-duration:1s;
+	font-size:100%;
+}
+
+#signUp:hover{
+	color:#0990ff;
+	text-shadow: 2px 2px 8px #00ff40;
+	transition-duration:1s;
+}
+
+#loginSignup:hover{
+	border:4px solid black;
+}
+
+#profileHolder{
+	left: 3%;
+    top: 3%;
+	font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	padding:10px;
+	height:10%;
+	width:10%;
+	position:absolute;
+	font-size: 1.5em;
+	font-weight: 500;
+	display:flex;
+	flex-direction:column;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#light{
+	position:absolute;
+}
+
+#pickup{
+	position:absolute;
+	display:none;
+	top:20%;
+	left:0%;
+	
+}
+
+#alternate{
+	display:none;
+	flex-direction:row;
+}
+
+h1[name='half']{
+	width:12vw;
+}
+
+#back{
+	margin-left:10px;
+}
+
+#next{
+	margin-right:10px;
+}
+
+#imageHolder{
+	position:absolute;
+	left:0;
+	overflow:scroll;
+	width:40vw;
+	height:100%;
+}
+
+#imageInstructions{
+	padding:1%;
+	object-fit: cover;
+	max-width:40vw;
+	min-width:30vw;
+	min-height:100%;
+}
+
+#instructionText{
+	font-family: 'Sawarabi Mincho', serif;
+	width:26vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	direction:ltr;
+	font-size:2vw;
+}
+
+#box{
+	display:flex;
+	flex-direction:row;
+	position:absolute;
+	left:0;
+	width:70%;
+	height:100%;
+}
+
+#instructions{
+	
+	width:100%;
+	height:80%;
+	background-color:white;
+	position:absolute;
+	display:none;
+}
+
+#warning{
+	left:0;
+	top:0;
+	width:100vw;
+	height:100vh;
+	background-color:rgba(75, 64, 70, 0.8);
+	position:fixed;
+	z-index:50000;
+	display:flex;
+	flex-direction:column;
+	padding:20px;
+	color:white;
+	font-size:5vw;
+	display:none;
+}
+
+#warning h1{
+	color:white;
+	text-align:center;
+	margin:10px;
+}
+
+#closeWarning{
+	width:100%;
+	text-align:center;
+	align-items:center;
+	padding-top:20px;
+	padding-bottom:20px;
+	color:white;
+	font-size:5vw;
+}
+
+#closeWarning:hover{
+	background-color:grey;
+	
+}
+
+@media only screen and (max-width: 700px) {
+	
+	#box{
+		margin-top:50px;
+		width:100%;
+		height:30%;
+		flex-direction:row;
+	}
+	
+	#absolute{
+		margin:0;
+	}
+	
+	instructions{
+		width:auto;
+		overflow-y:scroll;
+	}
+	
+	#imageHolder{
+		position:relative;
+		width:50vw;
+	}
+	
+	#instructionText{
+		position:relative;
+		width:50vw;
+		font-size:2.6vw;
+		padding:50px;
+	}
+	
+	#absolute{
+		margin-top:50px;
+		position:relative;
+	}
+	
+	.play{
+		width:90vw;
+	}
+	
+	.title{
+		margin-bottom:50px;
+		font-size:10vw;
+	}
+	
+	#controls{
+		margin:0px;
+	}
+	
+	#healthBack{
+		top: 1vh;
+		height:2vh;
+	}
+	
+	#hungerBack{
+		top: 5vh;
+		height:2vh;
+	}
+	
+	#banner{
+		width:100%;
+		height:100%;
+	}
+	
+	.mobileControl{
+		user-select:none;
+		background-color:rgba(170,170,170,0.3);
+		border-radius:4px;
+		width:200px;
+		height:200px;
+		border: 2px solid #eeeeee;
+		position:absolute;
+		left:20px;
+		bottom:20px;
+	}
+	.row{
+		user-select:none;
+		width:100%;
+		height:33%;
+		display:flex;
+		padding:0;
+		margin:0 !important;
+		justify-content:center;
+		align-items:center;
+	}
+
+	.row:nth-child(2){
+		align-items:center;
+		justify-content:start !important;
+	}
+
+	.button{
+		
+	width:75px;
+	height:75px;
+		opacity: 1 !important;
+		
+		user-drag: none; 
+	  user-select: none;
+	  -moz-user-select: none;
+	  -webkit-user-drag: none;
+	  -webkit-user-select: none;
+	  -ms-user-select: none;
+	}
+	
+	#upButton{
+		background-image: url("images/upArrow.png");
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+	}
+
+	#downButton{
+		background-image: url("images/downArrow.png");
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+	}
+
+	#leftButton{
+		background-image: url("images/leftArrow.png");
+		position:absolute;
+		left:20px;
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+	}
+
+	#rightButton{
+		background-image: url("images/rightArrow.png");
+		position:absolute;
+		right: 20px;
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+	}
+}
