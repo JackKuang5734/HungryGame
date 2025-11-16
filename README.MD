@@ -1,9 +1,9 @@
-Welcome to my web dev 12 project! HungryGame is a showcase of Google's realtime database service "Firebase" to create a multiplayer sandbox game. 
+Welcome to my web dev 12 project! HungryGame is a showcase of Google's realtime database service "Firebase" to create a decentralized multiplayer sandbox game. 
 Live demo on the website NT2M.online. If stuck on the loading screen, try restarting the webpage. If further issues persist, let me know.
 
 About this project:
   Whilst this originated from an in-class project to learn the basic practices of cloud databases, I was inspired to push my limits and experiment 
-  with Google's Firebase database program to create a 2d multiplayer sandbox game.
+  with Google's Firebase database program to create a 2d multiplayer experience.
 
   The user client makes API calls to firebase to update the database of movement delta and interact options, and the server returns the new "world json"
   which calculates the current position and state of the world. This allows players to see each other, move around, and craft objects with sticks and stones
@@ -33,3 +33,4 @@ Key Challenges:
 
 Future Improvements:
   Revamped canvas image display (screens not 1920x1080 will display objects at an offset, not representative of the "real" position)
+
